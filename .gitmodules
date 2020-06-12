@@ -1,0 +1,3 @@
+[submodule "InterestingCode"]
+	path = InterestingCode
+	url = https://github.com/scouttea/InterestingCode.git
