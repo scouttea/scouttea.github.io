@@ -1,4 +1,5 @@
 const CopyPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -18,13 +19,14 @@ module.exports = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new CopyPlugin({
             patterns:[
                 { from: './dev/html/.', to:'.'}
         ]}),
     ],
     output: {
-        path: __dirname,
+        path: __dirname + "/docs/",
         publicPath: '/',
         filename: 'bundle.js'
     },
